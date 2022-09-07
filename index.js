@@ -20,6 +20,13 @@ buttons.map(button => {
                     
                 }
                 break;
+            case '=':
+                try{
+                    display.innerText = eval(display.innerText);
+                } catch {
+                    display.innerText = 'Error!';
+                }
+                break;
             default:
                 display.innerText += e.target.innerText;
                 // this will add numbers to the display
